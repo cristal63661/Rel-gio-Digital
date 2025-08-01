@@ -53,6 +53,25 @@ body {
   user-select: none;
 }
 
+/* Assinatura */
+.signature {
+  font-family: 'Poppins', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #d6336c;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+  user-select: none;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Modo escuro assinatura */
+body.dark .signature {
+  color: #f72585;
+  opacity: 0.8;
+}
+
 /* Botões */
 button {
   cursor: pointer;
