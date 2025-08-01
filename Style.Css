@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f6;
+  color: #d6336c;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.6s, color 0.6s;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+/* Container central */
+.container {
+  background: #ffffffdd;
+  border-radius: 20px;
+  padding: 2.5rem 3.5rem;
+  box-shadow: 0 4px 20px rgba(214, 51, 108, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 320px;
+}
+
+/* Relógio */
+.clock {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.8rem;
+  color: #d6336c;
+  text-shadow:
+    0 0 5px #f783ac,
+    0 0 15px #f783ac;
+  user-select: none;
+}
+
+/* Data e dia */
+.date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: #9e2146;
+  user-select: none;
+}
+
+/* Botões */
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.55rem 1.8rem;
+  border-radius: 9999px;
+  transition: background-color 0.4s, color 0.4s;
+  box-shadow: 0 0 10px #f783ac88;
+  color: #fff;
+  background: linear-gradient(135deg, #f72585, #b5179e);
+  user-select: none;
+  margin: 0 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.05em;
+}
+button:hover {
+  background: linear-gradient(135deg, #b5179e, #f72585);
+  box-shadow: 0 0 20px #f72585;
+}
+
+/* Modo escuro */
+body.dark {
+  background: #2a1a2e;
+  color: #f783ac;
+}
+body.dark .container {
+  background: #3a253edd;
+  box-shadow: 0 4px 25px rgba(247, 131, 172, 0.5);
+}
+body.dark .clock {
+  color: #f72585;
+  text-shadow:
+    0 0 7px #f72585,
+    0 0 18px #f72585;
+}
+body.dark .date {
+  color: #f783ac;
+}
+body.dark button {
+  background: linear-gradient(135deg, #f72585, #b5179e);
+  box-shadow: 0 0 15px #f783acaa;
+  color: #fff;
+}
+body.dark button:hover {
+  background: linear-gradient(135deg, #b5179e, #f72585);
+  box-shadow: 0 0 30px #f72585;
+}
+
+/* Decorações fofas: brilhinhos */
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #f72585 0%, transparent 80%);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 3px #f72585);
+  opacity: 0.8;
+  animation: sparkleAnim 2.5s infinite ease-in-out alternate;
+  pointer-events: none;
+  z-index: 5;
+}
+@keyframes sparkleAnim {
+  0% { transform: translateY(0) scale(1); opacity: 0.8;}
+  100% { transform: translateY(-5px) scale(1.3); opacity: 0.4;}
+}
+
+/* Corações pequenos */
+.heart {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #f72585;
+  clip-path: polygon(
+    50% 15%, 61% 0%, 76% 0%, 88% 13%, 88% 29%, 75% 45%, 
+    50% 75%, 25% 45%, 12% 29%, 12% 13%, 24% 0%, 39% 0%
+  );
+  opacity: 0.7;
+  filter: drop-shadow(0 0 2px #b5179e);
+  animation: heartBeat 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); opacity: 0.7;}
+  50% { transform: scale(1.3); opacity: 0.4;}
+}
+
+/* Layout dos botões */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
