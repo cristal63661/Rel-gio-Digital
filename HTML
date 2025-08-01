@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relógio Digital - Atena Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" role="main" aria-label="Relógio digital Atena">
+    <div class="clock" aria-live="polite" aria-atomic="true">00:00:00</div>
+    <div class="date" aria-live="polite" aria-atomic="true"></div>
+    <div class="buttons">
+      <button id="toggleTheme" aria-label="Alternar tema claro e escuro">Modo Escuro</button>
+      <button id="btnCelebrate" aria-label="Ativar modo celebrar">🎉 Celebrar</button>
+    </div>
+  </div>
+
+  <!-- Decorações espalhadas -->
+  <div class="sparkle" style="top: 20vh; left: 15vw;"></div>
+  <div class="sparkle" style="top: 40vh; left: 85vw; animation-delay: 0.5s;"></div>
+  <div class="sparkle" style="top: 70vh; left: 35vw; animation-delay: 1s;"></div>
+  <div class="heart" style="top: 30vh; left: 60vw; animation-delay: 0s;"></div>
+  <div class="heart" style="top: 55vh; left: 20vw; animation-delay: 1.5s;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
